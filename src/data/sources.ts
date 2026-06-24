@@ -1,0 +1,202 @@
+import type { SourceEntry } from "@/types/source";
+
+/**
+ * ソース台帳データ。
+ * 注意：china-official カテゴリは「信頼できる情報源」ではなく
+ * 「公式ナラティブ確認用」として明示的に別枠で扱う。
+ */
+export const sources: SourceEntry[] = [
+  // --- A. 一次データ・統計機関 ---
+  {
+    slug: "imf",
+    name: "IMF（国際通貨基金）",
+    nameEn: "International Monetary Fund",
+    region: "国際機関（ワシントンD.C.）",
+    category: "primary-data",
+    perspective: "国際金融秩序の安定を重視する立場からのマクロ経済分析",
+    strengths: "国際比較可能なマクロ経済データ・財政データの蓄積",
+    biasWarning:
+      "G7主導のガバナンス構造を前提とし、新興国への財政規律要求が強めに出る傾向がある",
+    usageNote: "経済記事における数値根拠・国際比較の一次資料として使用する",
+    url: "https://www.imf.org",
+  },
+  {
+    slug: "bis",
+    name: "BIS（国際決済銀行）",
+    nameEn: "Bank for International Settlements",
+    region: "国際機関（中央銀行連合・スイス）",
+    category: "primary-data",
+    perspective: "金融システムの安定性を重視する中央銀行間の合意形成の立場",
+    strengths: "国際金融データ・銀行統計の精度の高さ",
+    biasWarning: "中央銀行間の合意形成側に立った説明になりやすい",
+    usageNote: "金融市場・資本フロー分析の裏付けデータとして使用する",
+    url: "https://www.bis.org",
+  },
+  {
+    slug: "oecd",
+    name: "OECD（経済協力開発機構）",
+    nameEn: "Organisation for Economic Co-operation and Development",
+    region: "国際機関（先進国中心）",
+    category: "primary-data",
+    perspective: "先進国基準の政策評価・比較分析",
+    strengths: "税制・労働・教育など分野横断の比較統計",
+    biasWarning: "加盟国＝先進国中心の規範観が前提になっている",
+    usageNote: "政策比較記事の基礎データとして使用する",
+    url: "https://www.oecd.org",
+  },
+  {
+    slug: "fred",
+    name: "FRED（セントルイス連銀データベース）",
+    nameEn: "Federal Reserve Economic Data",
+    region: "米国",
+    category: "primary-data",
+    perspective: "米国マクロ経済の一次データ提供",
+    strengths: "高頻度・長期系列の経済データへの無償アクセス",
+    biasWarning: "米国内の政策運営の前提・分類方法に依拠している",
+    usageNote: "米国経済・金融市場記事の一次資料として使用する",
+    url: "https://fred.stlouisfed.org",
+  },
+
+  // --- B. 日本の政策・経済系シンクタンク ---
+  {
+    slug: "rieti",
+    name: "RIETI（経済産業研究所）",
+    nameEn: "Research Institute of Economy, Trade and Industry",
+    region: "日本",
+    category: "japan-policy",
+    perspective: "産業政策・通商政策の経済学的分析",
+    strengths: "経済学的に精緻な政策分析、貿易・産業データの活用力",
+    biasWarning: "経済産業省系の政策枠組みに親和的な論調になりやすい",
+    usageNote: "産業政策・貿易摩擦記事の深掘り分析として使用する",
+    url: "https://www.rieti.go.jp",
+  },
+  {
+    slug: "jiia",
+    name: "JIIA（日本国際問題研究所）",
+    nameEn: "Japan Institute of International Affairs",
+    region: "日本",
+    category: "japan-policy",
+    perspective: "外交・安全保障の政策圏に近い立場からの分析",
+    strengths: "外務省と近い政策圏の論点把握、専門家ネットワーク",
+    biasWarning: "政府方針を補強する論調になりやすい",
+    usageNote: "外交政策の「政策圏がどう考えているか」を確認する資料として使用する",
+    url: "https://www.jiia.or.jp",
+  },
+
+  // --- C. 第三極・グローバルサウスの視点 ---
+  {
+    slug: "channel-newsasia",
+    name: "Channel NewsAsia",
+    nameEn: "CNA",
+    region: "シンガポール",
+    category: "third-pole",
+    perspective: "ASEANの実務的・等距離外交の視点",
+    strengths: "米中対立に距離を置いた報道姿勢、東南アジア現地情報への強さ",
+    biasWarning: "シンガポール政府の立場への配慮がにじむことがある",
+    usageNote: "ASEAN視点の補完・等距離外交の論調確認に使用する",
+    url: "https://www.channelnewsasia.com",
+  },
+  {
+    slug: "the-hindu",
+    name: "The Hindu",
+    region: "インド",
+    category: "third-pole",
+    perspective: "インドの戦略的自律（非同盟・多極主義）の視点",
+    strengths: "インドの外交的立場・南アジア情勢への深い知見",
+    biasWarning: "インド国内政治（与野党対立）の影響を受けることがある",
+    usageNote: "米中いずれにも完全には属さないインド視点の確認に使用する",
+    url: "https://www.thehindu.com",
+  },
+
+  // --- D. 欧州・金融・国際秩序視点 ---
+  {
+    slug: "financial-times",
+    name: "Financial Times",
+    region: "英国",
+    category: "europe-finance",
+    perspective: "グローバル金融資本・市場実務の視点",
+    strengths: "金融市場・企業動向の実務的分析の質の高さ",
+    biasWarning: "金融資本・グローバル企業の利害に親和的な論調になりやすい",
+    usageNote: "金融市場記事の一次分析・市場の受け止め方の確認に使用する",
+    url: "https://www.ft.com",
+  },
+  {
+    slug: "iiss",
+    name: "IISS（国際戦略研究所）",
+    nameEn: "International Institute for Strategic Studies",
+    region: "英国",
+    category: "europe-finance",
+    perspective: "国際軍事バランスの専門的評価",
+    strengths: "軍事力評価データ（Military Balance）の権威性",
+    biasWarning: "西側軍事同盟の枠組みを前提とした評価軸になりやすい",
+    usageNote: "軍事バランス・防衛力評価記事の一次資料として使用する",
+    url: "https://www.iiss.org",
+  },
+
+  // --- E. 米国政策圏・戦略コミュニティ ---
+  {
+    slug: "csis",
+    name: "CSIS（戦略国際問題研究所）",
+    nameEn: "Center for Strategic and International Studies",
+    region: "米国",
+    category: "us-policy",
+    perspective: "対中戦略・インド太平洋安全保障の政策提言",
+    strengths: "政策提言の速度と具体性、専門家ネットワークの厚み",
+    biasWarning:
+      "防衛産業等からの資金関係もあり、対中強硬論への構造的な傾斜がある",
+    usageNote:
+      "「米国政策圏が何を考えているか」を読む資料として使用する。中立情報源としては扱わない",
+    url: "https://www.csis.org",
+  },
+  {
+    slug: "rand",
+    name: "RAND研究所",
+    nameEn: "RAND Corporation",
+    region: "米国",
+    category: "us-policy",
+    perspective: "国防・軍事シナリオ分析",
+    strengths: "軍事シミュレーション分析の蓄積、長年のデータ基盤",
+    biasWarning: "米国防省との近接性が高く、脅威評価が前提化しやすい",
+    usageNote: "軍事シナリオ・有事想定記事の参照資料として使用する",
+    url: "https://www.rand.org",
+  },
+
+  // --- F. 中国側の公式ナラティブ取得源（公式ナラティブ確認用） ---
+  {
+    slug: "xinhua",
+    name: "新華社",
+    nameEn: "Xinhua News Agency",
+    region: "中国",
+    category: "china-official",
+    perspective: "中国共産党・政府の公式見解の発信",
+    strengths: "中国政府の意図・公式立場を直接確認できる一次性",
+    biasWarning: "国家通信社として完全に体制側の発信機能を担う",
+    usageNote:
+      "「中国がどう正当化しているか」を確認する専用資料として使用する。事実認定の根拠にはしない",
+    url: "https://www.xinhuanet.com",
+  },
+  {
+    slug: "peoples-daily-online",
+    name: "人民網",
+    nameEn: "People's Daily Online",
+    region: "中国",
+    category: "china-official",
+    perspective: "党機関紙系のオンライン版による国内向け論調",
+    strengths: "中国国内向けの公式論調・プロパガンダの温度感を確認できる",
+    biasWarning: "党中央の宣伝機能そのものであり、独立報道ではない",
+    usageNote: "国内向け公式ナラティブの確認専用として使用する",
+    url: "http://www.people.com.cn",
+  },
+  {
+    slug: "mofa-china",
+    name: "中国外交部",
+    nameEn: "Ministry of Foreign Affairs of the People's Republic of China",
+    region: "中国",
+    category: "china-official",
+    perspective: "中国政府の外交における公式見解",
+    strengths: "記者会見・声明など、政府の公式立場の一次資料",
+    biasWarning: "発信そのものが外交プロパガンダの機能を持つ",
+    usageNote: "公式声明の原文確認専用として使用し、解釈は別途分解する",
+    url: "https://www.mfa.gov.cn",
+  },
+];

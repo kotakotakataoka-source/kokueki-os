@@ -28,8 +28,8 @@ export default function Home() {
           日本の実利を整理する。
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          完全に中立な情報源は存在しません。本サイトはすべての情報源に立場があることを前提に、
-          その立場を可視化したうえで、事実・解釈・感情表現・日本への実利を分離して提示します。
+          すべての情報源には立場があります。本サイトはその立場を可視化し、
+          事実・解釈・感情表現・日本への実利を分けて示します。
           問いは常に一つ。「これは日本にとって、どこがプラスで、どこがマイナスか」。
         </p>
         <div className="mt-6 flex flex-wrap gap-3">

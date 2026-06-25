@@ -108,7 +108,7 @@ export default async function ArticleDetailPage({
         </div>
       </header>
 
-      <div className="grid gap-10 py-10">
+      <div className="grid min-w-0 gap-10 py-10">
         <section>
           <SectionHeading index="1" title="今日の論点" />
           <p className="text-sm leading-relaxed text-foreground">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FeedbackLink } from "@/components/feedback-link";
 
 export const metadata: Metadata = {
   title: "About / 編集方針",
@@ -113,6 +114,10 @@ export default function AboutPage() {
             本サイト自身もまた、立場を持つ一つの情報源であることを忘れずに読んでいただければと思います。
           </p>
         </Section>
+      </div>
+
+      <div className="mt-8">
+        <FeedbackLink />
       </div>
     </div>
   );

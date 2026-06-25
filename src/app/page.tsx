@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArticleCard } from "@/components/article-card";
 import { TermCard } from "@/components/term-card";
+import { FeedbackLink } from "@/components/feedback-link";
 import { articles } from "@/data/articles";
 import { terms } from "@/data/terms";
 import { ARTICLE_CATEGORY_LABELS } from "@/types/article";
@@ -137,6 +138,10 @@ export default function Home() {
           ソース台帳を見る
         </Button>
       </section>
+
+      <div className="mt-12">
+        <FeedbackLink />
+      </div>
     </div>
   );
 }

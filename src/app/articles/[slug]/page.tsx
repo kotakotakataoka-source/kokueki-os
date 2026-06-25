@@ -16,6 +16,7 @@ import {
 } from "@/components/article/source-reference-list";
 import { UncertaintyBox } from "@/components/article/uncertainty-box";
 import { DisclaimerBox } from "@/components/article/disclaimer-box";
+import { FeedbackLink } from "@/components/feedback-link";
 import { articles } from "@/data/articles";
 import { terms } from "@/data/terms";
 import { sources } from "@/data/sources";
@@ -195,6 +196,10 @@ export default async function ArticleDetailPage({
       </div>
 
       <DisclaimerBox publishedAt={article.publishedAt} />
+
+      <div className="mt-6">
+        <FeedbackLink />
+      </div>
 
       <footer className="mt-8 border-t border-border pt-6">
         <Link href="/articles" className="text-sm text-accent hover:underline">

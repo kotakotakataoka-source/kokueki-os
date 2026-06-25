@@ -3,7 +3,7 @@
  * フォームURLが未設定の間は何も表示しない（UIを壊さないため）。
  * 用意ができたら下の値を Google フォーム等のURLに置き換える。
  */
-const FEEDBACK_FORM_URL = "";
+const FEEDBACK_FORM_URL = "https://forms.gle/yNSxjAJttxcyjsSB8";
 
 export function FeedbackLink() {
   if (!FEEDBACK_FORM_URL) return null;

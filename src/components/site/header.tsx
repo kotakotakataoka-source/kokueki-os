@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const NAV_LINKS = [
+  { href: "/start", label: "初めての方へ" },
   { href: "/articles", label: "記事一覧" },
   { href: "/sources", label: "ソース台帳" },
   { href: "/terms", label: "感情ワード辞典" },

@@ -18,6 +18,9 @@ export function Footer() {
           をご覧ください。
         </p>
         <nav className="mt-6 flex flex-wrap gap-4 text-xs text-muted-foreground">
+          <Link href="/start" className="hover:text-foreground hover:underline">
+            初めての方へ
+          </Link>
           <Link href="/about" className="hover:text-foreground hover:underline">
             About / 編集方針
           </Link>

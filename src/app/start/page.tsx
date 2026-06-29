@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { articles } from "@/data/articles";
 import { FeedbackLink } from "@/components/feedback-link";
 import type { Article } from "@/types/article";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "初めての方へ",
   description:
     "国際情勢を、感情ではなく構造と日本への実利で読むための入口。まず読む3本と、テーマ別の読む順番を紹介します。",
-};
+  path: "/start",
+});
 
 const WHAT_YOU_CAN_DO = [
   {

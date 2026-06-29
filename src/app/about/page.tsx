@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { FeedbackLink } from "@/components/feedback-link";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About / 編集方針",
   description:
     "このサイトの目的、完全中立を名乗らない理由、情報源の立場を可視化する方針、事実・解釈・感情表現・日本への実利を分離する方針について説明します。",
-};
+  path: "/about",
+});
 
 function Section({
   title,

@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { TermCard } from "@/components/term-card";
 import { terms } from "@/data/terms";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "感情ワード辞典",
   description:
     "感情的・政治的な言葉を、実利ベースの構造に翻訳して整理する辞典。特定の陣営を断罪せず、言葉の裏にある構造を説明する。",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

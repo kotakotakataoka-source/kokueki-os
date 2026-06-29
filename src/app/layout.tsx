@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-sans",
@@ -10,17 +11,26 @@ const notoSansJP = Noto_Sans_JP({
   weight: ["400", "500", "700"],
 });
 
-const SITE_NAME = "国益分解";
-const SITE_TAGLINE =
-  "感情論を排し、一次情報・多角的視点・日本の実利を整理する情報キュレーション";
-
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: `${SITE_NAME} ｜ ${SITE_TAGLINE}`,
     template: `%s ｜ ${SITE_NAME}`,
   },
-  description:
-    "情報源の立場を可視化し、事実・解釈・感情表現・日本への実利を分離して整理する国益ベースの情報キュレーションサイト。",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} ｜ ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} ｜ ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

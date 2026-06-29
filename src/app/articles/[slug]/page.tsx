@@ -22,6 +22,7 @@ import { terms } from "@/data/terms";
 import { sources } from "@/data/sources";
 import { ARTICLE_CATEGORY_LABELS } from "@/types/article";
 import { formatImpactScore, impactToneClass } from "@/lib/impact";
+import { pageMetadata } from "@/lib/site";
 
 interface PageParams {
   slug: string;
@@ -45,9 +46,24 @@ export async function generateMetadata({
   if (!article) {
     return { title: "記事が見つかりません" };
   }
-  return {
+  const base = pageMetadata({
     title: article.title,
     description: article.summary,
+    path: `/articles/${slug}`,
+  });
+  // Don't carry over the generic `images` fallback: this route has its own
+  // colocated opengraph-image.tsx, which Next attaches automatically as
+  // long as the metadata object doesn't set `images` itself.
+  return {
+    ...base,
+    openGraph: {
+      title: base.openGraph?.title,
+      description: base.openGraph?.description,
+      url: base.openGraph?.url,
+      type: "article",
+      publishedTime: article.publishedAt,
+      tags: article.tags,
+    },
   };
 }
 

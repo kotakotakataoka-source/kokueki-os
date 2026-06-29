@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { SourcesExplorer } from "@/components/sources-explorer";
 import { sources } from "@/data/sources";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "ソース台帳",
   description:
     "情報源のバイアスを消すのではなく可視化する。各情報源の立場・強み・注意すべきバイアス・使い方を整理した台帳。",
-};
+  path: "/sources",
+});
 
 export default function SourcesPage() {
   return (

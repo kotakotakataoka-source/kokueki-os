@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { ArticleCard } from "@/components/article-card";
 import { articles } from "@/data/articles";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "記事一覧",
   description:
     "各テーマについて、事実・各陣営の見方・感情ワードの分解・日本への実利を整理した記事の一覧。",
-};
+  path: "/articles",
+});
 
 const sortedArticles = [...articles].sort(
   (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()

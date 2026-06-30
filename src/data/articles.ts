@@ -20,16 +20,23 @@ export const articles: Article[] = [
       "米商務省産業安全保障局（BIS）は、先端半導体の製造・設計に関わる装置・技術の対中輸出管理を継続的に強化してきた。対象には日本企業が強みを持つ製造装置・材料分野の一部技術も含まれ、日本政府は対米協調の範囲を個別協議で調整している。中国側は国内半導体産業の自立育成を加速させると表明している。",
     primarySources: [
       {
+        sourceSlug: "bis-commerce",
+        title:
+          "Commerce Strengthens Export Controls to Restrict China's Capability to Produce Advanced Semiconductors for Military Modernization",
+        url: "https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military",
+        note: "半導体製造装置24種・ソフトウェア3種等を対象とした輸出管理強化の公式発表（2024年12月2日）",
+      },
+      {
         sourceSlug: "fred",
-        title: "米国の輸出関連マクロ統計（参考データ）",
-        url: "https://fred.stlouisfed.org",
-        note: "対中輸出規制が米国経済全体に与える規模感を確認するための参考指標",
+        title: "U.S. Exports of Goods by F.A.S. Basis to Mainland China (EXPCH)",
+        url: "https://fred.stlouisfed.org/series/EXPCH",
+        note: "対中輸出規制が米国の対中輸出全体に与える規模感を確認するための統計系列",
       },
       {
         sourceSlug: "rieti",
-        title: "経済安全保障と輸出管理に関する政策分析",
-        url: "https://www.rieti.go.jp",
-        note: "日本の輸出管理制度・産業政策との関係を確認するための分析",
+        title: "常態化する米中対立で進むデカップリング－懸念される日本企業への影響－",
+        url: "https://www.rieti.go.jp/users/china-tr/jp/ssqs/230516ssqs.html",
+        note: "日本の輸出管理制度・経済安全保障推進法との関係、日本企業への影響を確認するための分析",
       },
     ],
     narrativeViews: [
@@ -160,18 +167,25 @@ export const articles: Article[] = [
     todaysFocus:
       "レアアース・重要鉱物の精製・加工能力は中国に高度に集中しており、各国の脱リスク政策は供給網の組み替えという長い時間を要する課題である。日本にとっては代替供給網構築の機会であると同時に、短期的なコスト負担を伴う。",
     whatHappened:
-      "中国はレアアース等の重要鉱物について輸出管理を強化する動きを継続しており、米国・EU・日本は代替供給網の構築（豪州・カナダ等との連携、リサイクル技術への投資）を進めている。中国国務院は資源管理の強化を「正常な国内管理」と説明している。",
+      "中国は2025年4月にサマリウム・ガドリニウム・テルビウム等7種類のレアアース関連品目を輸出管理対象に追加し、同年10月には中重レアアース関連品目への規制と国外再輸出規制を含む追加措置を公布した。これらの追加措置は同年10月30日の米中首脳会談（釜山）を受けて2026年11月10日まで暫定的に停止されている。一方、日本向けの軍民両用品目に対する輸出管理は2026年1月6日付で強化され、即日施行された。米国・EU・日本は豪州・カナダ等との連携やリサイクル技術への投資により、代替供給網の構築を進めている。中国国務院は資源管理の強化を「正常な国内管理」と説明している。",
     primarySources: [
       {
-        sourceSlug: "oecd",
-        title: "重要鉱物の貿易・供給網に関する統計分析",
-        url: "https://www.oecd.org",
-        note: "主要国の重要鉱物依存度を比較するための参考データ",
+        sourceSlug: "rieti",
+        title: "わが国の輸入はどの程度特定国に依存しているのか：経済安全保障に関わる重要品目のサプライチェーンの脆弱性",
+        url: "https://www.rieti.go.jp/jp/special/special_report/178.html",
+        note: "日本の重要鉱物輸入の対中依存度・サプライチェーン脆弱性を確認するための分析",
       },
       {
-        sourceSlug: "rieti",
-        title: "資源安全保障と産業政策に関する分析",
-        url: "https://www.rieti.go.jp",
+        sourceSlug: "jetro",
+        title: "中国のレアアース輸出管理（1）日本への磁石輸出に大きな影響",
+        url: "https://www.jetro.go.jp/biz/areareports/special/2026/0101/5229e687b7a111eb.html",
+        note: "対日輸出管理強化の対象品目・発効日を確認するための一次情報",
+      },
+      {
+        sourceSlug: "oecd",
+        title: "OECD Inventory of Export Restrictions on Critical Raw Materials 2026",
+        url: "https://www.oecd.org/en/publications/oecd-inventory-of-export-restrictions-on-critical-raw-materials-2026_d5ca8f62-en.html",
+        note: "主要国の重要鉱物依存度・輸出規制の国際比較データ",
       },
     ],
     narrativeViews: [
@@ -248,8 +262,8 @@ export const articles: Article[] = [
       "資源リサイクル・代替供給網関連の技術投資は中長期的な政策的後押しを受けやすい領域である。一方で短期的な調達コスト増は関連製造業のマージンを圧迫しうるため、業種・企業ごとの依存度を分けて評価する必要がある。",
     uncertainties: [
       {
-        point: "中国の輸出管理強化が今後どこまで対象品目を拡大するか",
-        whyUncertain: "通商交渉の進展次第で運用の厳格さが変動しうる",
+        point: "2025年10月の追加規制（2026年11月10日まで暫定停止中）が期限到来時に再発動されるか",
+        whyUncertain: "米中通商交渉の進展次第で運用方針が変わりうるため、現時点では両国とも最終方針を明示していない",
       },
       {
         point: "代替供給網構築のコストが最終製品価格にどの程度反映されるか",
@@ -257,6 +271,10 @@ export const articles: Article[] = [
       },
     ],
     keyIndicators: [
+      {
+        label: "2026年11月10日の規制暫定停止期限における中国側の対応",
+        description: "停止継続・再発動・恒久化のいずれに向かうかを確認する",
+      },
       {
         label: "中国の重要鉱物輸出統計（UN Comtrade等）",
         description: "輸出量・輸出先の変化を定点観測する",
@@ -274,128 +292,152 @@ export const articles: Article[] = [
 
   {
     slug: "hormuz-strait-energy-security",
-    title: "ホルムズ海峡リスクと日本のエネルギー安全保障",
+    title: "ホルムズ海峡危機と日本のエネルギー安全保障",
     category: "energy-security",
-    publishedAt: "2026-06-20",
+    publishedAt: "2026-06-29",
     summary:
-      "ホルムズ海峡は日本の原油・LNG輸入の主要経路であり、中東情勢の緊張は日本のエネルギー安全保障に直接的な影響を及ぼす。各国の関与の度合いと利害は一様ではない。",
-    tags: ["エネルギー安全保障", "中東情勢", "原油", "LNG"],
-    overallJapanImpact: -2,
+      "2026年2月の米国・イスラエルによるイラン攻撃を機に、ホルムズ海峡は事実上閉鎖され、世界の原油・LNG輸送が急減した。6月の米イラン覚書で戦闘は収束に向かったが、海峡情勢は完全には安定していない。日本は当事者ではないまま、中東依存度の高さゆえに最も影響を受けた国の一つとなった。",
+    tags: ["エネルギー安全保障", "中東情勢", "原油", "LNG", "ホルムズ海峡危機"],
+    overallJapanImpact: -3,
     todaysFocus:
-      "ホルムズ海峡周辺の緊張は、日本の原油・LNG輸入経路の脆弱性を改めて浮き立たせている。日本にとっての論点は「誰が正しいか」ではなく、供給混乱が起きた場合にどの程度の代替手段を持っているかである。",
+      "2026年2月末に始まった米国・イスラエルとイランの軍事衝突は、ホルムズ海峡の事実上の閉鎖という、日本のエネルギー安全保障にとって想定し得る最悪級のシナリオを現実のものにした。6月の覚書で戦闘は収束に向かっているが、断続的な攻撃も報じられており、海峡情勢は完全には正常化していない。論点は「誰が正しいか」ではなく、実際に供給網が混乱した今、日本がどれだけ耐え、何を変えるべきかである。",
     whatHappened:
-      "中東地域における軍事的緊張の高まりを受け、ホルムズ海峡における航行リスクへの懸念が国際的に報じられている。同海峡は世界の海上原油輸送の主要経路であり、日本の原油輸入の多くが同海峡を経由している。関係国は航行の安全確保について異なる立場を表明している。",
+      "2026年2月28日、米国とイスラエルはイランに対する軍事攻撃を実施し、イラン最高指導者ハメネイ師が死亡した。イランは3月4日にホルムズ海峡の「閉鎖」を宣言し、機雷敷設や船舶への攻撃により同海峡の通航量は大幅に減少した。米国は4月13日から5月29日にかけてイラン港湾への海上封鎖を実施し、6月17日に両国は戦闘・海峡封鎖の終結に関する覚書に署名した。ただし6月20日以降もイラン側が停戦違反を主張して海峡封鎖の動きを見せるなど、情勢は完全には安定していない。日本は原油輸入の93%以上を中東に依存しており、経済産業省によればLNG輸入のうち同海峡経由は6.3%である。日本政府は国家備蓄原油の放出など供給確保策を実施した。",
     primarySources: [
       {
+        sourceSlug: "meti-enecho",
+        title: "中東情勢を踏まえた石油及び関連製品等に関する対応",
+        url: "https://www.enecho.meti.go.jp/category/others/energysecurity/index.html",
+        note: "国家備蓄原油の放出など、日本政府の対応を確認するための公式情報",
+      },
+      {
         sourceSlug: "iiss",
-        title: "中東の軍事バランスに関する分析",
-        url: "https://www.iiss.org",
-        note: "地域の軍事的緊張度を評価するための専門分析",
+        title: "Navigating the Strait of Hormuz",
+        url: "https://www.iiss.org/online-analysis/survival-online/2026/06/navigating-the-strait-of-hormuz/",
+        note: "海峡封鎖後の軍事的力学・航行リスクに関する専門分析（2026年6月）",
+      },
+      {
+        sourceSlug: "csis",
+        title: "What Are the Implications of the Iran Conflict for Japan?",
+        url: "https://www.csis.org/analysis/what-are-implications-iran-conflict-japan",
+        note: "米国側シンクタンクによる、日本への影響・対米関係上の論点分析（2026年3月）",
       },
       {
         sourceSlug: "fred",
-        title: "原油価格・エネルギー関連統計",
-        url: "https://fred.stlouisfed.org",
-        note: "国際原油価格の動向を確認するための参考データ",
+        title: "Crude Oil Prices: Brent - Europe (DCOILBRENTEU)",
+        url: "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+        note: "海峡情勢に対する市場の評価を確認するための原油価格統計",
       },
     ],
     narrativeViews: [
       {
-        campName: "米国",
-        emphasis: "航行の自由の確保と地域の安定維持",
-        hidden: "自国のエネルギー自給度が高く、相対的な影響度が小さいという立場の違い",
-        framingWords: ["航行の自由", "地域の安定"],
-        actualInterest: "中東における軍事的プレゼンスと影響力の維持",
+        campName: "米国陣営",
+        emphasis: "イランの核・軍事能力の排除と航行の自由の回復",
+        hidden: "自国による対イラン攻撃が、海峡封鎖という経済的反作用を招いた経緯",
+        framingWords: ["航行の自由", "地域の安定", "レジームチェンジ"],
+        actualInterest: "イランの核・軍事能力の不可逆的な低下と、中東における影響力の維持",
       },
       {
-        campName: "ホルムズ海峡沿岸国",
-        emphasis: "自国の安全保障上の正当な権利の主張",
-        hidden: "海峡封鎖が自国の輸出経路にも影響するという相互依存の側面",
-        framingWords: ["主権的権利", "安全保障上の対応"],
-        actualInterest: "地域における自国の戦略的立場の確保",
+        campName: "イラン",
+        emphasis: "自国への軍事攻撃に対する正当な自衛権の行使としての海峡封鎖",
+        hidden: "封鎖が自国の原油輸出能力も同時に失わせるという代償",
+        framingWords: ["自衛権", "主権侵害への対抗"],
+        actualInterest: "体制存続と、攻撃を行った米国・イスラエルへの実効的な反撃手段の確保",
       },
       {
         campName: "日本政策圏",
-        emphasis: "エネルギー供給の安定確保と代替調達ルートの検討",
-        hidden: "中東依存度の高さに対する構造的な対応の遅れ",
+        emphasis: "国家備蓄の活用と代替調達ルートの確保による安定供給",
+        hidden: "中東依存度の高さに対する構造的な対応が、危機発生まで十分に進んでいなかった経緯",
         framingWords: ["エネルギー安全保障", "安定供給"],
-        actualInterest: "供給混乱時の代替調達能力と国内備蓄の確保",
+        actualInterest:
+          "戦闘の当事者にならないことと、米国からのタンカー護衛参加要請への対応との間でバランスを取ること",
       },
     ],
     emotionWords: [
       {
         termSlug: "national-security",
-        contextNote: "エネルギー供給の文脈でも安全保障という語が用いられ、軍事と経済の論点が混在しやすい",
+        contextNote:
+          "イランは海峡封鎖を「自衛権の行使」、米国は対イラン攻撃を「国家安全保障」上の必要性として説明し、攻撃した側・対抗した側の双方が同じ語を用いている",
       },
       {
         termSlug: "international-order",
-        contextNote: "航行の自由を巡る議論で、秩序維持を訴える側の正当化に使われる",
+        contextNote:
+          "米国・同盟国は海峡封鎖の解消を「国際秩序」「航行の自由」の回復として説明するが、その秩序の定義自体は米国主導の枠組みを前提にしている",
       },
     ],
     stakeholders: [
       {
         name: "日本政府・エネルギー企業",
-        role: "原油・LNGの主要輸入国",
-        interest: "供給の安定確保、代替調達ルートの確保",
-        risk: "海峡封鎖・緊張激化時の供給混乱、価格上昇による経済負担",
+        role: "原油・LNGの主要輸入国であり、戦闘の当事者ではない第三者",
+        interest: "供給の安定確保、国家備蓄の有効活用",
+        risk: "供給混乱・価格上昇による直接的な経済負担、米国からの協力要請への対応を迫られるリスク",
       },
       {
         name: "米国",
-        role: "地域の軍事的プレゼンスを持つ主体",
-        interest: "地域における影響力の維持",
-        risk: "軍事的コミットメントの拡大に伴う負担",
+        role: "イランへの攻撃を主導した当事国",
+        interest: "イランの軍事的能力の低下、中東における影響力の維持",
+        risk: "海峡封鎖という経済的反作用を自ら招いたこと、同盟国への負担要請による関係の緊張",
       },
       {
-        name: "ホルムズ海峡沿岸国",
-        role: "海峡の地理的な統制力を持つ主体",
-        interest: "自国の戦略的立場・交渉力の確保",
-        risk: "自国の石油輸出経路も同時にリスクを負う",
+        name: "イラン",
+        role: "ホルムズ海峡封鎖を実施した当事国",
+        interest: "体制存続、攻撃国への実効的な反撃手段の確保",
+        risk: "封鎖の長期化による自国の原油輸出能力・経済の損失",
       },
     ],
     japanImpact: {
       scores: [
         { axis: "economy", score: -3 },
-        { axis: "industry", score: -1 },
+        { axis: "industry", score: -2 },
         { axis: "security", score: -1 },
         { axis: "financialMarket", score: -2 },
         { axis: "techSovereignty", score: 0 },
         { axis: "energy", score: -4 },
         { axis: "supplyChain", score: -2 },
-        { axis: "diplomacy", score: 0 },
+        { axis: "diplomacy", score: -1 },
       ],
       shortTerm:
-        "原油・LNG価格の上昇により、輸入コストの増加と企業コスト・消費者物価への押し上げ圧力が生じる。",
+        "原油価格上昇・国家備蓄の放出により当面の供給は確保されたが、輸入コスト増がガソリン・電力料金への押し上げ圧力につながった。",
       midTerm:
-        "供給混乱が長期化する場合、代替調達ルート（北米・他中東地域）への切り替えコストが発生する。",
+        "覚書後も海峡情勢が完全には安定しておらず、迂回輸送ルートの恒常化コストや、米国からのタンカー護衛参加要請への対応が課題として残る。",
       longTerm:
-        "中東依存度の高さが構造的な脆弱性として再認識され、エネルギー調達の多元化・備蓄政策の見直しが進む可能性がある。",
+        "中東依存度の高さが構造的な脆弱性として改めて確認され、調達の多元化・備蓄政策・有事対応の制度設計の見直しが進む可能性がある。",
     },
     investmentImplications:
-      "エネルギー関連株式・為替市場は中東情勢の緊張度に敏感に反応しやすい。断定的な投資判断は避けるべきだが、原油価格上昇時のコスト構造（輸入依存度の高い業種への影響）を確認する視点が必要である。",
+      "エネルギー関連株式・為替市場は中東情勢に敏感に反応した。断定的な投資判断は避けるべきだが、輸入依存度の高い業種のコスト構造、備蓄放出・代替調達の進捗を確認する視点が必要である。",
     uncertainties: [
       {
-        point: "軍事的緊張が実際の航行制限・海峡封鎖に至るかどうか",
-        whyUncertain: "関係国の意図と能力の双方が不透明であり、現時点では推測の域を出ない",
+        point: "2026年6月のMOU後も海峡情勢が完全に安定したと言えるか",
+        whyUncertain:
+          "MOU後も断続的な攻撃・停戦違反の主張が報じられており、公開情報だけでは各当事者の遵守状況を確証できない",
       },
       {
-        point: "日本の代替調達ルート・備蓄でどの程度の期間を乗り切れるか",
-        whyUncertain: "公開情報では国家備蓄の運用詳細が限定的にしか確認できない",
+        point: "日本が米国からのタンカー護衛参加要請に今後どう対応するか",
+        whyUncertain: "報道時点では日本政府は慎重な姿勢を示しているのみで、最終的な政策判断は確定していない",
+      },
+      {
+        point: "国家備蓄原油の放出量の正確な規模",
+        whyUncertain: "報道・資料によって数値の単位や対象期間の記載が異なり、一次資料での統一的な確認ができていない",
       },
     ],
     keyIndicators: [
       {
-        label: "国際原油価格（WTI・ブレント）の動向",
-        description: "供給リスクの市場評価を確認する",
+        label: "ホルムズ海峡の実際の通航量・タンカー保険料率",
+        description: "海峡情勢が実質的に正常化しているかを確認する",
       },
       {
         label: "経済産業省・資源エネルギー庁の備蓄・調達関連発表",
         description: "日本側の対応策の進捗を確認する",
       },
+      {
+        label: "日本政府のタンカー護衛・自衛隊派遣要請への対応方針",
+        description: "対米同盟への協力と紛争への直接関与回避の、どちらに重心が振れるかを確認する",
+      },
     ],
     conclusion:
-      "ホルムズ海峡の緊張は、誰が正しいかという物語ではなく、供給網のどこに脆弱性があるかという構造の問題である。日本にとって重要なのは、緊張の当事者にならないことよりも、混乱が起きた場合にどれだけ耐えられるかという備えである。",
+      "ホルムズ海峡の危機は、想定されていたリスクが実際に現実化した事例である。日本にとって重要なのは、誰が攻撃を始めたかという物語ではなく、当事者ではないまま供給網の混乱を直接受けたという事実、そして米国からの協力要請にどう向き合うかという、これから問われる選択である。",
     readerQuestion:
-      "あなたの暮らしや仕事は、原油・LNG価格が大きく上昇した場合にどの程度の影響を受けるだろうか。",
+      "日本政府が米国からタンカー護衛への自衛隊参加を要請された場合、エネルギー安全保障上の利益と、紛争への直接関与を避ける利益のどちらを、どの程度優先すべきだろうか。",
   },
 
   {
@@ -410,17 +452,19 @@ export const articles: Article[] = [
     todaysFocus:
       "台湾海峡における軍事的緊張シナリオは、日本にとって防衛上の問題であると同時に、半導体・部材の供給網が集中する地域が混乱した場合の経済的打撃という、安全保障と経済が直結する論点である。",
     whatHappened:
-      "台湾周辺における中国軍の活動頻度の高まりが各国の防衛当局・シンクタンクによって報告されており、有事シナリオに関する分析が増えている。台湾には先端半導体の生産能力が高度に集中しており、同地域の供給網混乱リスクは日本企業の調達計画にも影響を与えている。",
+      "中国軍は2025年12月29日から30日にかけて台湾周辺で過去最大規模とされる軍事演習を実施し、福建省から27発のロケットを発射（うち10発が台湾の接続水域内に着弾）、軍艦13隻と中国海警局・海上安全局の船舶14隻が参加した。同年10月23日の中国共産党第15次五カ年計画に関する公式声明では、従来「平和的統一」と表現していた文言から「平和的」と「統一」を分離する形に変化したと指摘されている。台湾には先端半導体の生産能力が高度に集中しており、同地域の供給網混乱リスクは日本企業の調達計画にも影響を与えている。",
     primarySources: [
       {
         sourceSlug: "rieti",
-        title: "経済安全保障とサプライチェーン集中リスクに関する分析",
-        url: "https://www.rieti.go.jp",
+        title: "強靭で創造的なサプライチェーンの構築のために",
+        url: "https://www.rieti.go.jp/jp/columns/a01_0704.html",
+        note: "半導体サプライチェーンの地理的集中リスクと日本の対中部品依存度に関する分析",
       },
       {
         sourceSlug: "iiss",
-        title: "台湾周辺の軍事バランスに関する分析",
-        url: "https://www.iiss.org",
+        title: "The Military Balance 2026",
+        url: "https://www.iiss.org/publications/the-military-balance/",
+        note: "中国の軍事力・国防予算・台湾周辺での活動に関する年次評価",
       },
     ],
     narrativeViews: [
@@ -542,17 +586,19 @@ export const articles: Article[] = [
     todaysFocus:
       "BRICSの拡大と「脱ドル化」の議論は、既存の国際金融秩序への挑戦として報じられがちだが、実態は参加国ごとに異なる利害が混在する緩やかな枠組みである。日本への影響は限定的だが、長期的な国際金融秩序の構造変化として注視が必要である。",
     whatHappened:
-      "BRICS（ブラジル・ロシア・インド・中国・南アフリカ）は加盟国・パートナー国の拡大を進めており、自国通貨での貿易決済拡大や独自の決済インフラ整備が議題となっている。米ドル基軸体制への依存を下げる「脱ドル化」が一部加盟国で主張されているが、共通通貨創設のような統合的な動きには至っていない。",
+      "BRICS（ブラジル・ロシア・インド・中国・南アフリカ）はパートナー国の拡大を続けており、2026年初にはベトナムが10カ国目のパートナー国として加わった。インドは2026年9月にニューデリーで第18回BRICS首脳会議を主催する予定である。ロシア・中国のSPFS・CIPS、インドのUPI、ブラジルのPixを連携させる決済システム「BRICS Pay」の構築が進められており、インド中央銀行は2026年1月、参加国の中央銀行デジタル通貨（デジタルルピー・デジタル人民元等）の連携も提案した。一方でBRICSは共通通貨創設の構想を明示的に見送っている。IMFの統計（2025年第4四半期）では、世界の外貨準備に占める米ドルの比率は56.77%であり、人民元は1.95%にとどまる。インド外相ジャイシャンカルは2025年3月、「ドルを代替する政策はない」と述べている。",
     primarySources: [
       {
         sourceSlug: "imf",
-        title: "国際決済における通貨別シェアに関する統計",
-        url: "https://www.imf.org",
+        title: "Currency Composition of Official Foreign Exchange Reserves (COFER)",
+        url: "https://data.imf.org/en/datasets/IMF.STA:COFER",
+        note: "世界の外貨準備に占める米ドル・人民元等の比率を確認するための一次統計",
       },
       {
-        sourceSlug: "the-hindu",
-        title: "BRICSにおけるインドの立場に関する報道・分析",
-        url: "https://www.thehindu.com",
+        sourceSlug: "impri",
+        title: "India's Russian Oil Imports And The Sanctions Squeeze: Balancing Strategic Autonomy And Economic Cost",
+        url: "https://www.impriindia.com/centres/center-for-international-relations-and-strategic-studies/indias-russian-oil-imports-and-the-sanctions-squeeze-balancing-strategic-autonomy-and-economic-cost/",
+        note: "インドが脱ドル化に同調しない理由・米国との関係上のコストを確認するための分析（2026年6月）",
       },
     ],
     narrativeViews: [
@@ -675,17 +721,19 @@ export const articles: Article[] = [
     todaysFocus:
       "インドは米国主導の対中協調枠組み（クアッド等）にも、中国・ロシア主導の枠組み（BRICS、上海協力機構）にも同時に参加するという、いずれの陣営にも完全には属さない外交姿勢を取っている。日本にとってインドは、米中対立の構図に当てはめて理解すべきではないパートナーである。",
     whatHappened:
-      "インドはクアッド（日米豪印）の枠組みで対中警戒を共有する一方、BRICSや上海協力機構など中国・ロシアが主導する枠組みにも参加を続けている。ロシアとの軍事・エネルギー関係も維持しており、西側の対ロシア制裁にも全面的には同調していない。",
+      "インドはクアッド（日米豪印）の枠組みで対中警戒を共有する一方、BRICSや上海協力機構など中国・ロシアが主導する枠組みにも参加を続けている。米国は2025年7月31日付の大統領令でインドに基本25%の追加関税を課し、同年8月6日にはロシア産原油購入を理由とした追加25%の関税（累計50%）を発動した。これを受けてインドのロシア産原油輸入量は2025年1月の約150万バレル/日から2026年1月には43.6万バレル/日へと7割以上減少し、同期間に米国からのエネルギー輸入は3分の2増加した。インド政府は方針転換について「商業的判断」と説明し、戦略的自律という原則自体は撤回していない。",
     primarySources: [
       {
-        sourceSlug: "the-hindu",
-        title: "インドの外交的立場に関する報道・分析",
-        url: "https://www.thehindu.com",
+        sourceSlug: "impri",
+        title: "India's Russian Oil Imports And The Sanctions Squeeze: Balancing Strategic Autonomy And Economic Cost",
+        url: "https://www.impriindia.com/centres/center-for-international-relations-and-strategic-studies/indias-russian-oil-imports-and-the-sanctions-squeeze-balancing-strategic-autonomy-and-economic-cost/",
+        note: "米国の関税圧力とインドのロシア産原油輸入減少の規模を確認するための分析（2026年6月）",
       },
       {
         sourceSlug: "csis",
-        title: "米国側から見たインドの戦略的価値に関する分析",
-        url: "https://www.csis.org",
+        title: "A More Balanced U.S.-India Strategic Partnership",
+        url: "https://www.csis.org/analysis/more-balanced-us-india-strategic-partnership",
+        note: "米国側シンクタンクによる、対インド関係の評価・戦略的価値に関する分析",
       },
     ],
     narrativeViews: [
@@ -772,8 +820,8 @@ export const articles: Article[] = [
       "インド市場・製造拠点への関心は中長期的な構造トレンドとして妥当性があるが、インドが「同盟国」と同じ行動原理で動くという前提は誤解を招きやすい。個別の協力分野ごとにインドの実際の利害を確認する視点が必要である。",
     uncertainties: [
       {
-        point: "インドが対ロシア関係をどの程度まで維持するか",
-        whyUncertain: "エネルギー・軍事調達上の実利と西側との関係のバランスが今後の交渉次第である",
+        point: "ロシア産原油輸入の急減が一時的な調整か、対ロ関係の構造的な縮小につながるか",
+        whyUncertain: "米国の関税圧力が今後緩和された場合にインドが輸入を再増加させるかどうかは、報道時点では明らかになっていない",
       },
       {
         point: "クアッドの実効性が今後どこまで深化するか",
@@ -808,19 +856,19 @@ export const articles: Article[] = [
     todaysFocus:
       "中国の公式メディア・外交部が頻繁に用いる「覇権主義」という言葉は、単純な批判表現ではなく、特定の国際秩序観を前提とした正当化ロジックである。この記事では、その言葉自体を分析対象とする。",
     whatHappened:
-      "新華社・人民網・中国外交部の発信において、「覇権主義」という言葉は主に米国およびその同盟国の行動を指す際に繰り返し使われている。同時に、中国自身の行動については「正当な権利の行使」「平和的発展」として説明されており、同じ行動原理が当事者によって異なる語で描写される構図がある。",
+      "新華社・中国外交部の発信において、「覇権主義（霸权主义）」という言葉は主に米国の行動を指す際に繰り返し使われている。例えば2026年1月の新華時評は、米国によるベネズエラへの介入・マドゥロ大統領拘束、グリーンランド領有権要求、キューバへの制裁強化などを「霸権行径（覇権的行為）」と総括した。同年5月の外交部定例記者会見でも、発言人がベネズエラ・キューバに対する米国の行動を同様に「霸権行径」と非難している。同時に、中国自身の対外行動については「正当な権利の行使」「平和的発展」として説明されており、同じ行動原理が当事者によって異なる語で描写される構図がある。",
     primarySources: [
       {
         sourceSlug: "xinhua",
-        title: "新華社の対外発信における「覇権主義」関連の表現",
-        url: "https://www.xinhuanet.com",
-        note: "事実認定の根拠としてではなく、公式ナラティブの原文確認として使用",
+        title: "新华时评丨霸权行径只会让全球陷入混乱动荡",
+        url: "https://china.chinadaily.com.cn/a/202601/14/WS6966fa0da310942cc499b2d7.html",
+        note: "事実認定の根拠としてではなく、公式ナラティブの原文確認として使用（2026年1月14日、新華社配信）",
       },
       {
         sourceSlug: "mofa-china",
-        title: "中国外交部の記者会見・声明",
-        url: "https://www.mfa.gov.cn",
-        note: "公式声明の原文確認として使用",
+        title: "2026年5月7日外交部发言人林剑主持例行记者会",
+        url: "https://www.mfa.gov.cn/fyrbt_673021/202605/t20260507_11906358.shtml",
+        note: "公式声明における「霸権行径」という語の使用例の原文確認として使用",
       },
     ],
     narrativeViews: [
@@ -937,17 +985,19 @@ export const articles: Article[] = [
     todaysFocus:
       "AI関連技術（先端半導体、AIモデルそのもの、学習基盤）の輸出管理が国際的に強化される中、日本は規制の主体ではなく、米国の規制枠組みに同調する立場にある。技術主権の確保という観点では、自律的な能力構築が課題として残る。",
     whatHappened:
-      "米国は高性能AIチップ・AIモデルの輸出管理を継続的に見直しており、同盟国に対しても同様の管理を求める動きがある。日本政府はAI関連の技術基盤整備・国内データセンター投資を進めつつ、米国の規制枠組みとの整合性を取る必要に迫られている。",
+      "米国は高性能AIチップ・AIモデルの輸出管理を継続的に見直しており（2025年1月のAI Diffusion Frameworkによる対象拡大等）、同盟国に対しても同様の管理を求める動きがある。一方で、規制の迂回（小型・隠匿しやすいチップの密輸事例）や中国企業の自律的な技術開発の進展により、規制の実効性には限界があるとの分析もある。日本政府は2030年までに官民で50兆円規模の投資を見込むAI・半導体産業基盤強化策を進めつつ、米国の規制枠組みとの整合性を取る必要に迫られている。",
     primarySources: [
       {
         sourceSlug: "csis",
-        title: "米国のAI技術政策・輸出管理に関する分析",
-        url: "https://www.csis.org",
+        title: "The Limits of Chip Export Controls in Meeting the China Challenge",
+        url: "https://www.csis.org/analysis/limits-chip-export-controls-meeting-china-challenge",
+        note: "米国の輸出管理の効果と限界（迂回事例・中国の自律的開発）に関する分析（2025年4月）",
       },
       {
-        sourceSlug: "rieti",
-        title: "日本のAI関連産業政策に関する分析",
-        url: "https://www.rieti.go.jp",
+        sourceSlug: "meti-ai-semicon",
+        title: "AI・半導体産業基盤強化フレーム",
+        url: "https://www.meti.go.jp/policy/mono_info_service/ai_semiconductor_frame/ai_semiconductor_frame.html",
+        note: "日本政府のAI・半導体産業政策の投資規模・対象分野を確認するための一次資料",
       },
     ],
     narrativeViews: [
@@ -1058,17 +1108,19 @@ export const articles: Article[] = [
     todaysFocus:
       "日米安全保障条約は日本の防衛政策の基盤であり続けているが、同盟への依存度の高さは、対中・対ロシア外交における日本の独自の交渉余地を制約する側面も持つ。安保体制の評価は、利益とコストの両方を見る必要がある。",
     whatHappened:
-      "日米両政府は防衛協力の深化（共同訓練、装備協力、指揮統制の連携強化等）を継続している。同時に、日本国内では防衛費増額や同盟への依存度の高さについて、与野党・論者の間で評価が分かれている。",
+      "日米両政府は2024年4月の合意に基づき、自衛隊の統合作戦司令部と在日米軍の統合軍司令部化による指揮統制連携の強化を進めている。高市政権は防衛費のGDP比2%目標を当初予定の2027年度から前倒しで達成し、2026年度予算では防衛関係費が過去最大の9兆353億円となった。同時に、日本国内では防衛費増額や同盟への依存度の高さについて、与野党・論者の間で評価が分かれている。",
     primarySources: [
       {
         sourceSlug: "jiia",
-        title: "日米同盟の政策圏における評価分析",
-        url: "https://www.jiia.or.jp",
+        title: "未来への回帰：日米同盟における指揮統制関係強化の意義",
+        url: "https://www.jiia.or.jp/jpn/report/2025/03/2025-05.html",
+        note: "指揮統制連携強化の経緯・意義に関する政策圏の分析（2025年3月）",
       },
       {
         sourceSlug: "csis",
-        title: "米国側から見た同盟政策に関する分析",
-        url: "https://www.csis.org",
+        title: "Deepening Strategic Alignment: Priorities for the U.S.-Japan Alliance",
+        url: "https://www.csis.org/analysis/deepening-strategic-alignment-priorities-us-japan-alliance",
+        note: "米国側シンクタンクによる、同盟の優先課題・負担分担に関する分析（2026年4月）",
       },
     ],
     narrativeViews: [
@@ -1177,22 +1229,19 @@ export const articles: Article[] = [
     todaysFocus:
       "日本の防衛費増額は、米国メディアでは同盟強化として、中国公式メディアでは軍国主義復活の懸念として、欧州メディアでは財政・産業の論点として、それぞれ異なる枠組みで報じられている。同じ事実が報じられ方によってまったく異なる印象を生む典型例である。",
     whatHappened:
-      "日本の防衛費は増額傾向が続いており、GDP比の防衛関連予算は過去の水準から拡大している。この動きについて、各国・各メディアの報道トーンには明確な差異がある。",
+      "日本の防衛関連予算は2026年度に過去最大の9兆353億円（GDP比約1.9〜2%）となり、高市政権は当初2027年度を目標としていたGDP比2%水準を前倒しで達成した。防衛費の増額に伴う国債発行増を背景に、日本国債（JGB）の利回りは年初から上昇傾向にある。ISEAS-ユソフ・イシャク研究所（シンガポール）が2026年4月に公表した東南アジア向け調査では、日本への信頼度は65.6%で、EU・米国・中国・インドを上回る結果となったが、専門家は日本が軍備増強の動機について透明性を保つ必要があると指摘している。この動きについて、各国・各メディアの報道トーンには明確な差異がある。",
     primarySources: [
       {
         sourceSlug: "iiss",
-        title: "日本の防衛費・軍事バランスに関する統計分析",
-        url: "https://www.iiss.org",
+        title: "Asian defence spending in 2026: growth under fiscal constraints",
+        url: "https://www.iiss.org/online-analysis/online-analysis/2026/05/asian-defence-spending-in-2026-growth-under-fiscal-constraints/",
+        note: "日本を含むアジア地域の防衛費動向に関する専門分析（2026年5月）",
       },
       {
-        sourceSlug: "financial-times",
-        title: "欧州金融圏から見た防衛費増額の財政・産業論点",
-        url: "https://www.ft.com",
-      },
-      {
-        sourceSlug: "channel-newsasia",
-        title: "ASEAN圏から見た地域軍事バランスの報道",
-        url: "https://www.channelnewsasia.com",
+        sourceSlug: "scmp",
+        title: "Japan remains most trusted power in Southeast Asia despite military build-up: survey",
+        url: "https://www.scmp.com/week-asia/politics/article/3350284/japan-remains-most-trusted-power-southeast-asia-despite-military-build-survey",
+        note: "ISEAS-ユソフ・イシャク研究所の信頼度調査結果を報じる記事（2026年4月7日公開の調査結果について）",
       },
     ],
     narrativeViews: [
@@ -1315,18 +1364,19 @@ export const articles: Article[] = [
     todaysFocus:
       "日本の外交言説では「中立」という言葉がしばしば理想として語られるが、中立は立場を持たないことではなく、むしろ自国の判断基準を持たないリスクを意味しうる。インドが体現する「戦略的自律」という概念が、日本にとってより実利的な指針になりうる。",
     whatHappened:
-      "米中対立の長期化、BRICSの拡大、インドの戦略的自律路線などを背景に、日本国内でも対米同盟一辺倒からの脱却を求める論調と、同盟深化を求める論調が併存している。「中立」という言葉自体は日本の政策論議でほとんど使われないが、「全方位外交」「等距離外交」という表現で類似の議論が起きている。",
+      "米中対立の長期化、BRICSの拡大、ホルムズ海峡危機（2026年）での日本へのタンカー護衛参加要請など実際の同盟負担が可視化されたことを背景に、日本国内でも対米同盟一辺倒からの脱却を求める論調と、同盟深化を求める論調が併存している。「中立」という言葉自体は日本の政策論議でほとんど使われないが、「全方位外交」「等距離外交」という表現で類似の議論が起きている。JIIA（日本国際問題研究所）は2026年2月の「戦略アウトルック2026」で「戦略的自律性の強化は同盟関係の軽視を意味するものではない」と整理しており、自律性強化と同盟深化を相補的な概念として位置づけている。",
     primarySources: [
       {
         sourceSlug: "jiia",
-        title: "日本の外交政策圏における同盟・自律性に関する分析",
-        url: "https://www.jiia.or.jp",
+        title: "戦略アウトルック2026 ―不確実性時代における日本の戦略的自律性及び不可欠性―",
+        url: "https://www.jiia.or.jp/jpn/report/2026/02/Outlook2026jp00.html",
+        note: "日本の外交政策圏における「戦略的自律性」の定義と同盟との関係に関する2026年版分析",
       },
       {
-        sourceSlug: "the-hindu",
-        title: "インドの戦略的自律路線に関する報道・分析",
-        url: "https://www.thehindu.com",
-        note: "「戦略的自律」の具体的な実例として参照",
+        sourceSlug: "impri",
+        title: "India's Russian Oil Imports And The Sanctions Squeeze: Balancing Strategic Autonomy And Economic Cost",
+        url: "https://www.impriindia.com/centres/center-for-international-relations-and-strategic-studies/indias-russian-oil-imports-and-the-sanctions-squeeze-balancing-strategic-autonomy-and-economic-cost/",
+        note: "「戦略的自律」の具体的な実践例として、米国の圧力下でのインドの実際の対応・コストを確認するための参照資料",
       },
     ],
     narrativeViews: [
@@ -1449,14 +1499,15 @@ export const articles: Article[] = [
     primarySources: [
       {
         sourceSlug: "jiia",
-        title: "日本の情報環境・対外発信に関する政策圏の分析",
-        url: "https://www.jiia.or.jp",
+        title: "戦略アウトルック2026 ―不確実性時代における日本の戦略的自律性及び不可欠性―",
+        url: "https://www.jiia.or.jp/jpn/report/2026/02/Outlook2026jp00.html",
+        note: "日本の情報・戦略コミュニケーション課題を論じた政策圏の分析（日本の情報発信力の弱さを指摘した箇所を参照）",
       },
       {
-        sourceSlug: "channel-newsasia",
-        title: "ASEAN圏からの等距離的な報道の実例",
-        url: "https://www.channelnewsasia.com",
-        note: "米中いずれの陣営にも寄らない報道スタイルの具体例として参照",
+        sourceSlug: "scmp",
+        title: "Japan remains most trusted power in Southeast Asia despite military build-up: survey",
+        url: "https://www.scmp.com/week-asia/politics/article/3350284/japan-remains-most-trusted-power-southeast-asia-despite-military-build-survey",
+        note: "ISEAS-ユソフ・イシャク研究所の調査を報じる記事。英語圏主流メディアとは異なるアジア域内からの視点の具体例として参照",
       },
     ],
     narrativeViews: [

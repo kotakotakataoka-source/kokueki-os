@@ -56,6 +56,18 @@ export const sources: SourceEntry[] = [
     usageNote: "米国経済・金融市場記事の一次資料として使用する",
     url: "https://fred.stlouisfed.org",
   },
+  {
+    slug: "jetro",
+    name: "JETRO（日本貿易振興機構）",
+    nameEn: "Japan External Trade Organization",
+    region: "日本",
+    category: "primary-data",
+    perspective: "貿易・投資の実務的な動向速報",
+    strengths: "各国の輸出管理規制・貿易措置の発効日・対象範囲を速報する実務的な精度",
+    biasWarning: "日本企業の海外展開促進という設立目的上、リスクより機会を強調する論調になりやすい",
+    usageNote: "貿易規制の発効日・対象範囲を確認する一次資料として使用する",
+    url: "https://www.jetro.go.jp",
+  },
 
   // --- B. 日本の政策・経済系シンクタンク ---
   {
@@ -82,6 +94,31 @@ export const sources: SourceEntry[] = [
     usageNote: "外交政策の「政策圏がどう考えているか」を確認する資料として使用する",
     url: "https://www.jiia.or.jp",
   },
+  {
+    slug: "meti-enecho",
+    name: "経済産業省 資源エネルギー庁",
+    nameEn: "Agency for Natural Resources and Energy, Ministry of Economy, Trade and Industry",
+    region: "日本",
+    category: "japan-policy",
+    perspective: "エネルギー安全保障に関する日本政府の公式な対応・需給データ",
+    strengths: "石油備蓄放出・LNG調達依存度など、政策対応の一次データを確認できる",
+    biasWarning:
+      "政府として「対応できている」ことを強調する発表になりやすく、対応の限界やコストには踏み込みにくい",
+    usageNote: "エネルギー安全保障記事における、日本政府の実際の対応・依存度データの一次資料として使用する",
+    url: "https://www.enecho.meti.go.jp/category/others/energysecurity/index.html",
+  },
+  {
+    slug: "meti-ai-semicon",
+    name: "経済産業省 AI・半導体産業基盤強化フレーム",
+    nameEn: "METI — AI and Semiconductor Industrial Base Reinforcement Framework",
+    region: "日本",
+    category: "japan-policy",
+    perspective: "日本政府によるAI・半導体産業政策の公式な枠組み・支援方針",
+    strengths: "支援予算規模・対象分野など、産業政策の一次情報を確認できる",
+    biasWarning: "政策の効果・達成見込みを強調する発表になりやすく、米国規制との整合性のコストには踏み込みにくい",
+    usageNote: "日本のAI・半導体産業政策の具体的な施策を確認する一次資料として使用する",
+    url: "https://www.meti.go.jp/policy/mono_info_service/ai_semiconductor_frame/ai_semiconductor_frame.html",
+  },
 
   // --- C. 第三極・グローバルサウスの視点 ---
   {
@@ -106,6 +143,30 @@ export const sources: SourceEntry[] = [
     biasWarning: "インド国内政治（与野党対立）の影響を受けることがある",
     usageNote: "米中いずれにも完全には属さないインド視点の確認に使用する",
     url: "https://www.thehindu.com",
+  },
+  {
+    slug: "impri",
+    name: "IMPRI（インパクト・政策研究所）",
+    nameEn: "Impact and Policy Research Institute",
+    region: "インド",
+    category: "third-pole",
+    perspective: "インドの政策コミュニティに近い立場からの、戦略的自律をめぐる論点分析",
+    strengths: "インドの対露・対米関係における経済的コストを定量的に把握した分析",
+    biasWarning: "戦略的自律というインドの既定路線を擁護する前提に立つ論調を含む",
+    usageNote: "インドの外交・エネルギー政策に関する具体的データ・論点を確認する資料として使用する",
+    url: "https://www.impriindia.com",
+  },
+  {
+    slug: "scmp",
+    name: "South China Morning Post（SCMP）",
+    nameEn: "South China Morning Post",
+    region: "香港",
+    category: "third-pole",
+    perspective: "ASEAN・香港・中華圏を含む、英語圏とは異なるアジア地域内部からの報道視点",
+    strengths: "ASEAN・香港・中国本土に関する地域内取材網、学術調査の紹介力",
+    biasWarning: "アリババ集団による所有以降、対中国本土報道で抑制的になったとの指摘がある",
+    usageNote: "ASEAN・香港など、地域内部からの報道・調査結果の確認に使用する",
+    url: "https://www.scmp.com",
   },
 
   // --- D. 欧州・金融・国際秩序視点 ---
@@ -159,6 +220,20 @@ export const sources: SourceEntry[] = [
     biasWarning: "米国防省との近接性が高く、脅威評価が前提化しやすい",
     usageNote: "軍事シナリオ・有事想定記事の参照資料として使用する",
     url: "https://www.rand.org",
+  },
+  {
+    slug: "bis-commerce",
+    name: "米商務省産業安全保障局（BIS）",
+    nameEn: "Bureau of Industry and Security, U.S. Department of Commerce",
+    region: "米国",
+    category: "us-policy",
+    perspective: "輸出管理を直接執行する米国政府機関の公式発表",
+    strengths: "規制の対象品目・発効日・適用範囲を確認できる一次文書",
+    biasWarning:
+      "国家安全保障上の正当化を前提とした発表であり、規制の経済的副作用には触れない",
+    usageNote:
+      "輸出管理規制の発効日・対象範囲を確認する一次資料として使用する。規制の動機説明は「米国の公式ナラティブ」として扱う",
+    url: "https://www.bis.gov",
   },
 
   // --- F. 中国側の公式ナラティブ取得源（公式ナラティブ確認用） ---

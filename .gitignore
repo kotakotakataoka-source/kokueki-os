@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 記事ドラフト自動生成スクリプトが CI 内で一時生成するファイル
+.draft-pr-body.md

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "RIETI（経済産業研究所）",
+    "url": "https://www.rieti.go.jp/jp/rss.xml",
+    "language": "ja"
+  },
+  {
+    "name": "The Diplomat（アジア太平洋地政学）",
+    "url": "https://thediplomat.com/feed/",
+    "language": "en"
+  },
+  {
+    "name": "The Japan Times",
+    "url": "https://www.japantimes.co.jp/feed/",
+    "language": "en"
+  },
+  {
+    "name": "NHK World（日本の公式英語報道）",
+    "url": "https://www3.nhk.or.jp/nhkworld/en/feeds/news/",
+    "language": "en"
+  },
+  {
+    "name": "CSIS（米国戦略国際問題研究所）",
+    "url": "https://www.csis.org/analysis/rss.xml",
+    "language": "en"
+  }
+]

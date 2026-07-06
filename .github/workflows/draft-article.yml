@@ -1,4 +1,4 @@
-name: 記事ドラフト自動生成
+name: 記事自動生成・公開
 
 on:
   schedule:
@@ -7,10 +7,9 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
-  draft:
+  publish:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -23,34 +22,21 @@ jobs:
         with:
           node-version: '20'
 
-      - name: RSS取得・記事ドラフト生成
-        id: draft
+      - name: RSS取得・記事生成
+        id: generate
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/generate-draft.mjs
 
-      - name: ブランチ作成・コミット・プッシュ
-        if: steps.draft.outputs.branch != ''
+      - name: main へ直接コミット・プッシュ
+        if: steps.generate.outputs.branch != ''
         run: |
           git config user.email "action@github.com"
           git config user.name "kokueki-os bot"
-          git checkout -b "${{ steps.draft.outputs.branch }}"
           git add src/data/articles.ts
-          git commit -m "draft: ${{ steps.draft.outputs.title }}"
-          git push origin "${{ steps.draft.outputs.branch }}"
-
-      - name: Draft PR を作成
-        if: steps.draft.outputs.branch != ''
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr create \
-            --title "[ドラフト] ${{ steps.draft.outputs.title }}" \
-            --body-file .draft-pr-body.md \
-            --head "${{ steps.draft.outputs.branch }}" \
-            --base main \
-            --draft
+          git commit -m "feat: ${{ steps.generate.outputs.title }}"
+          git push origin main
 
       - name: 新着なし（スキップ）
-        if: steps.draft.outputs.branch == ''
+        if: steps.generate.outputs.branch == ''
         run: echo "新着記事候補がないか、適切なトピックがありませんでした。"

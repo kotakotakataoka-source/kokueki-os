@@ -83,6 +83,21 @@ export interface Stakeholder {
   risk: string;
 }
 
+/**
+ * 情報源の階層区分。
+ * - primary:  一次情報・公式発表（政府声明、国際機関公式文書、当事国メディア）
+ * - secondary: 二次情報・報道（Reuters、CNA等の事実報道）
+ * - analysis:  分析・解釈情報（シンクタンク、専門家コメント）
+ * 省略した場合はtierなしとして表示する（既存記事との後方互換）。
+ */
+export type SourceTier = "primary" | "secondary" | "analysis";
+
+export const SOURCE_TIER_LABELS: Record<SourceTier, string> = {
+  primary: "一次情報・公式発表",
+  secondary: "二次情報・報道",
+  analysis: "分析・解釈情報",
+};
+
 export interface SourceReference {
   /** sources.ts の SourceEntry.slug への参照 */
   sourceSlug: string;
@@ -90,6 +105,8 @@ export interface SourceReference {
   title: string;
   url: string;
   note?: string;
+  /** 情報源の階層区分 */
+  tier?: SourceTier;
 }
 
 export interface UncertaintyPoint {

@@ -274,4 +274,45 @@ export const sources: SourceEntry[] = [
     usageNote: "公式声明の原文確認専用として使用し、解釈は別途分解する",
     url: "https://www.mfa.gov.cn",
   },
+
+  // --- G. 東南アジア・当事国の公式発表源 ---
+  {
+    slug: "asean-official",
+    name: "ASEAN公式文書・議長声明",
+    nameEn: "ASEAN — Official Documents and Chairman's Statements",
+    region: "国際機関（東南アジア）",
+    category: "primary-data",
+    perspective: "ASEAN加盟国が合意した公式の枠組み・合意文書",
+    strengths: "加盟国間で合意された公式テキストを確認できる最高の一次資料",
+    biasWarning:
+      "コンセンサス原則上、最も異論の少ない表現に収斂しやすく、実態の対立は文書に反映されにくい",
+    usageNote: "ASEAN公式枠組み（5項目合意等）の原文確認専用として使用する",
+    url: "https://asean.org",
+  },
+  {
+    slug: "vientiane-times",
+    name: "Vientiane Times",
+    nameEn: "Vientiane Times",
+    region: "ラオス",
+    category: "china-official",
+    perspective: "ラオス政府系英字紙の公式ナラティブ",
+    strengths: "ラオス政府の公式立場・外交儀礼の言葉を確認できる一次資料",
+    biasWarning:
+      "ラオス政府系メディアであり、外交上の摩擦・批判的評価はほぼ出ない。外交儀礼の枠で包まれた報道として読む必要がある",
+    usageNote: "ラオス政府の公式ナラティブ確認専用として使用する。中立情報源としては扱わない",
+    url: "https://www.vientianetimes.org.la",
+  },
+  {
+    slug: "gnlm",
+    name: "Global New Light of Myanmar",
+    nameEn: "Global New Light of Myanmar",
+    region: "ミャンマー",
+    category: "china-official",
+    perspective: "ミャンマー国軍政府系英字紙の公式ナラティブ",
+    strengths: "ミャンマー国軍政府の公式立場・声明の原文を確認できる一次資料",
+    biasWarning:
+      "国軍政府の広報紙であり、クーデターの正当性・人権問題への言及はない。公式ナラティブの確認目的に限定して使用する",
+    usageNote: "ミャンマー軍政の公式ナラティブ確認専用として使用する。事実報道とは区別して扱う",
+    url: "https://www.gnlm.com.mm",
+  },
 ];

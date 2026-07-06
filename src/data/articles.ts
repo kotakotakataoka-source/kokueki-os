@@ -1799,23 +1799,40 @@ export const articles: Article[] = [
   
     primarySources: [
       {
+        sourceSlug: "asean-official",
+        title: "Chairman's Statement on the ASEAN Leaders' Meeting — Five-Point Consensus on Myanmar (24 April 2021)",
+        url: "https://asean.org/wp-content/uploads/Chairmans-Statement-on-ALM-Five-Point-Consensus-24-April-2021-FINAL-a-1.pdf",
+        note: "ASEAN首脳会議の公式議長声明。暴力停止・対話・特使派遣・人道支援・特使のミャンマー訪問という5項目合意の原文。今回のラオス訪問がこの合意をどう空洞化させているかを判断する際の基準文書。",
+        tier: "primary",
+      },
+      {
+        sourceSlug: "vientiane-times",
+        title: "Laos, Myanmar strengthen ties during state visit of Myanmar President",
+        url: "https://www.vientianetimes.org.la",
+        note: "ラオス政府系英字紙による訪問報道。「伝統的友好」「協力深化」という外交儀礼の言葉で包まれており、クーデターの正統性問題・ASEAN内の反発はほぼ出ない。ラオス側の公式ナラティブ確認用として使用する（中立情報源ではない）。",
+        tier: "primary",
+      },
+      {
         sourceSlug: "channel-newsasia",
         title: "Myanmar junta chief Min Aung Hlaing visits Laos in first ASEAN trip since coup",
         url: "https://www.channelnewsasia.com/asia/myanmar-junta-chief-min-aung-hlaing-visits-laos-asean-2026",
-        note: "チャンネルニュースアジア（シンガポール国営放送系）による報道。ASEAN内の関与路線国の立場から比較的中立に事実を伝えているが、シンガポール自身の対ASEAN政策とは切り離して読む必要がある。"
+        note: "CNAによる事実報道。ASEAN内の対立構図（強硬派・関与派）の整理の質が高く、シンガポール政府の立場への配慮はあるものの事実確認・文脈整理には適する。",
+        tier: "secondary",
       },
       {
         sourceSlug: "the-diplomat",
         title: "With Laos Trip, Min Aung Hlaing Drives a Wedge Into ASEAN",
         url: "https://thediplomat.com/2026/07/with-laos-trip-min-aung-hlaing-drives-a-wedge-into-asean/",
-        note: "The Diplomat（米系アジア専門媒体）による分析記事。民主主義・人権規範を重視する視点が色濃く、「軍政を孤立させるべき」という立場が読み取れる。"
+        note: "The Diplomatによる分析論評。民主主義・人権規範を重視する視点が強く「軍政孤立化を支持」という立場が明確。分析の切れ味は高いが、論評（事実ではない）として扱う必要がある。",
+        tier: "analysis",
       },
       {
         sourceSlug: "iiss",
         title: "ASEAN and Myanmar: Five-Point Consensus Implementation Gap",
         url: "https://www.iiss.org/publications/strategic-comments/myanmar-asean",
-        note: "IISSによるASEAN・ミャンマー問題の背景分析。5項目合意の履行状況を整理する際の参照として使用。直接の今回訪問に関する記述ではない可能性があり、要確認。"
-      }
+        note: "IISSによるASEAN・ミャンマー問題の背景分析。5項目合意の履行状況の整理に使用。今回訪問の直接報道ではなく、背景文脈の参照資料として位置づける。",
+        tier: "analysis",
+      },
     ],
   
     narrativeViews: [

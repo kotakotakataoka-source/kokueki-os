@@ -93,7 +93,7 @@ async function callClaude(prompt) {
     },
     body: JSON.stringify({
       model,
-      max_tokens: 8000,
+      max_tokens: 16000,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -188,12 +188,31 @@ async function main() {
     .join('\n\n');
 
   // 5. プロンプト構築
-  const prompt = `${promptTemplate.split('## 備考')[0].trim()}
+  // テンプレートから「# 出力形式」より前のコアのみ抽出（競合を避ける）
+  const templateStart = promptTemplate.indexOf('あなたは「国益分解」');
+  const templateEnd = promptTemplate.indexOf('# 出力形式');
+  const templateCore = templateStart >= 0 && templateEnd > templateStart
+    ? promptTemplate.slice(templateStart, templateEnd).trim()
+    : promptTemplate.split('## 備考')[0].trim();
+
+  const prompt = `${templateCore}
+
+# 禁止事項
+
+- 出典なしで事実を断定すること
+- 感情を煽る見出し・表現を使うこと（「衝撃」「暴挙」「危機」等）
+- 「このサイトは完全に中立だ」と書くこと
+- 特定の国家・政党・思想を善悪だけで評価すること
+- 公式発表・国家公式メディアの内容をそのまま事実として扱うこと
+- SNSの反応を「世論」として扱うこと
+- 投資判断を断定すること
+- 読者の不安・怒りを煽ってクリックさせる表現を使うこと
+
+# 今回のテーマ（RSS自動生成モード）
 
 テーマ：以下のRSS記事候補から、このサイトの読者にとって最も分析価値が高いものを1つ選んで記事化してください。
 参考にする情報・URL・メモ：以下の記事候補リストを参照
 公開予定日（publishedAt）：${today}
-\`\`\`
 
 ---
 
@@ -229,12 +248,12 @@ ${articleType}
 
 ---
 
-## 出力形式の指示
+# 出力形式（自動化モード・厳守）
 
-上記の記事候補から最も分析価値が高い1件を選んでください。
+上記の記事候補から最も分析価値が高い1件を選び、Step 1〜10を踏んで分析してください。
 もし候補の中に適切なものが1つもない場合（すでにカバー済み、事実確認できない等）は "NO_NEW_ARTICLE" とだけ出力してください。
 
-適切な候補がある場合、以下のマーカーで囲んだTypeScriptオブジェクトリテラルを出力してください。
+適切な候補がある場合、Step 1〜10の分析を行い、**分析の最後に必ず**以下のマーカーで囲んだ \`src/types/article.ts\` の \`Article\` 型に準拠したTypeScriptオブジェクトリテラルを出力してください。
 
 ---ARTICLE_START---
 {
@@ -243,7 +262,8 @@ ${articleType}
 }
 ---ARTICLE_END---
 
-マーカーの外に説明文を書いても構いません（提案する新規SourceEntry/TermEntryなど）。`;
+マーカーは必須です。マーカーなしでTypeScriptオブジェクトを出力しないでください。
+マーカーの外に説明文（新規SourceEntry/TermEntryの提案など）を書いても構いません。`;
 
   // 6. Claude API 呼び出し
   console.log('Claude API を呼び出し中...');
